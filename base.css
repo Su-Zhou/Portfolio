@@ -1,51 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+/* color palette
+#2493E
+ #8EBBFF 
+ #2F3651 
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .hero {
-    /* Sizing */
+    position: relative;
     width: 100vw;
     height: 100vh;
-    
-    /* Flexbox stuff */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Text styles */
-    text-align: center;
-    color: white; /* ADD THIS LINE */
-    
-    /* Background styles */
-    background-image: url('file:///Users/susane/Desktop/Portfolio/images/Girl_sitting(practice_final_copy)2.png');
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/hero_image.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    filter: brightness(50%);
+}
+.hero-content {
+    position: relative;
+    position: relative;
+    font-family: "Major Mono Display", Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+.hero-title {
+    font-size: 7rem;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    line-height: 1.5;
+}
+.hero-subtitle {
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 1rem;
+    padding-bottom: 5px;
+    text-align: center;
 }
 
-.hero h1 {
-    /* Text styles */
-    font-size: 5em;
-    
-    /* Margins */
-    margin-top: 0;
-    margin-bottom: 0.5em;
+nav ul {
+    position: relative;
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    padding-left: 3px
+
 }
 
-.hero .btn {
-    /* Positioning and sizing */
-    display: block;
-    width: 200px;
-    
-    /* Padding and margins */
-    padding: 1em;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    /* Text styles */
-    color: white; /* CHANGE THIS LINE */
+header a {
+    background-color: white;
     text-decoration: none;
-    font-size: 1.5em;
-    
-    /* Border styles */
-    border: 3px solid white; /* CHANGE THIS LINE */
-    border-radius: 20px;
+    text-align: center;
+    float: left;
+    padding: 10px;
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+nav {
+    text-align: center;
+}
+
+.hero-buttons-navigation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.hero-buttons-navigation li {
+    margin-right: 1em; 
+}
+
+.hero-buttons-navigation a {
+    text-decoration: none;
+    color: black; 
+    padding: 0.5em 1em; 
+    border: 1px solid black;
 }
