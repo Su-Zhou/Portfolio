@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
-/* color palette
-#2493E
- #8EBBFF 
- #2F3651 
- */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
+/* color palette (goes from lightest pink to darkest which is black)
+#D90769 (magenta)
+#D9117F (pink)
+#731953 (more purple)
+#313759 (background)
+#0D0D0D (black)
+*/
+
+/*body or entire page stuff */
 body {
+    background: linear-gradient(90deg, #181c2f, #d80560) ;
     margin: 0;
     padding: 0;
+    font-family: 'Michroma', sans-serif, arial;
 }
+/* end of entire page section stuff */
 
+/*hero page section */
 .hero {
     position: relative;
     width: 100vw;
@@ -19,7 +27,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .hero::before {
     content: "";
     position: absolute;
@@ -35,65 +42,137 @@ body {
 }
 .hero-content {
     position: relative;
-    position: relative;
-    font-family: "Major Mono Display", Arial, Helvetica, sans-serif;
+    font-family: 'Michroma',sans-serif, arial;
     color: white;
     text-align: center;
     margin: 0.625rem;
+    margin-top: 2em;
+    
 }
 .hero-title {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 600;
-    margin-bottom: 0.2em;
-    line-height: 1.5;
+    margin-bottom: 0;
 }
 .hero-subtitle {
-    font-size: 50px;
-    font-weight: 200;
+    font-size: 1.5rem;
+    font-weight: 100;
     margin-top: 1rem;
-    padding-bottom: 5px;
-    text-align: center;
+    flex-direction:row;
+    word-spacing: 5px;
+}
+
+
+nav {
+    position:relative;
+    bottom: 200px;
+    width: 100%;
+    z-index: 1;
+    font-family: 'Michroma',sans-serif, arial;
 }
 
 nav ul {
-    position: relative;
-    text-align: center;
-    list-style: none;
-    width: 100%;
-    padding-left: 3px
-
-}
-
-header a {
-    background-color: white;
-    text-decoration: none;
-    text-align: center;
-    float: left;
-    padding: 10px;
-    border-radius: 5px 5px 5px 5px;
-
-}
-
-nav {
-    text-align: center;
-}
-
-.hero-buttons-navigation {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    width: 80%; 
-    margin: 0 auto; 
+    position:relative;
+    
 }
 
-.hero-buttons-navigation li {
-    margin-right: 1em; 
+nav li {
+    margin: 0 15px;
+
 }
 
-.hero-buttons-navigation a {
+.button {
+    display: inline-block;
+    padding: 10px 20px;
     text-decoration: none;
-    color: black; 
-    padding: 0.5em 1em; 
-    border: 1px solid black;
+    background-color: #ffffff; 
+    border-radius: 5px;
+    color:#181c2f;
+    transition: background-color 0.3s ease;
 }
+
+.button:hover {
+    background-color: #c12151; 
+    color: white;
+}
+/*end of hero page section */
+
+
+/* start of the actual body/text section */
+/*starting with the about-me section*/
+#About-Me {
+    background-color:white;
+}
+
+
+
+.about-me-header {
+    color:#181c2f;
+}
+
+#About-Me {
+    color:#181c2f;
+}
+
+h4 {
+    color:white;
+}
+aside {
+    background:rgb(127, 127, 174);
+    display: block;
+    float: left;
+    padding: 0.5em 2em;
+    margin: 3em;
+    border-radius: 10px;
+}
+
+aside ol {
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+
+/*start of the works section*/
+
+
+
+
+
+/* end of the works section */
+
+
+/* experiementing with a scroll to top button without javascript */
+:root {
+    scroll-behavior: smooth;
+}
+
+.stt {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgb(255, 255, 255) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+    box-shadow: 0 0.25rem 0.5rem 0 rgb(223, 32, 95);
+  }
+  .stt:hover {
+    background-color:#c12151;
+    transition: background-color 0.3s ease;
+  }
+  .stt:focus {
+    opacity: 0.9;
+  }
+  .stt:active {
+    opacity: 1;
+  }
+  /* end of the scroll to top buttom */
