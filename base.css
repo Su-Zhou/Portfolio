@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Michroma&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Exo+2:wght@300&family=Michroma&display=swap');
+
 /* color palette (goes from lightest pink to darkest which is black)
 #D90769 (magenta)
 #D9117F (pink)
@@ -14,7 +18,7 @@ body {
     background: linear-gradient(90deg, #181c2f, #d80560) ;
     margin: 0;
     padding: 0;
-    font-family: 'Michroma', sans-serif, arial;
+    font-family: 'Exo 2', sans-serif;
 }
 /* end of entire page section stuff */
 
@@ -53,20 +57,94 @@ body {
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 0;
+    
 }
+.hero-title,
+.hero-title::after {
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.hero-title {
+	--animation-delay: var(--delay, 0);
+	--animation-duration: var(--duration, 800ms);
+	--animation-iterations: var(--iterations, 1);
+	position: relative;
+
+	animation-name: clip-text;
+	color: #FFF;
+	white-space: nowrap;
+	cursor: default;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color:#c12151;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer;
+	}
+	
+}
+
+@keyframes clip-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+
+
 .hero-subtitle {
     font-size: 1.5rem;
     font-weight: 100;
     margin-top: 1rem;
     flex-direction:row;
     word-spacing: 5px;
+    margin-bottom: 6rem;
 }
+
+/*navigation section */
+
 
 
 nav {
     position:relative;
-    bottom: 200px;
     width: 100%;
+    bottom: 40px;
     z-index: 1;
     font-family: 'Michroma',sans-serif, arial;
 }
@@ -77,12 +155,10 @@ nav ul {
     display: flex;
     justify-content: center;
     position:relative;
-    
 }
 
 nav li {
     margin: 0 15px;
-
 }
 
 .button {
@@ -99,6 +175,8 @@ nav li {
     background-color: #c12151; 
     color: white;
 }
+
+/*end of nav section*/
 /*end of hero page section */
 
 
@@ -106,17 +184,34 @@ nav li {
 /*starting with the about-me section*/
 #About-Me {
     background-color:white;
+    color:#181c2f;
+    float: left;
 }
 
-
-
+/*about me header*/
 .about-me-header {
+    font-family:'Michroma';
     color:#181c2f;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    font-size: 6em;
+    display: block;
+  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
+}
+@keyframes reveal {
+  1% {
+    transform: translate(0,100%);
+  }
+  100% {
+    transform: translate(0,0);
+  }
 }
 
-#About-Me {
-    color:#181c2f;
-}
+/*end of about me heading*/
+
+
 
 h4 {
     color:white;
@@ -128,6 +223,7 @@ aside {
     padding: 0.5em 2em;
     margin: 3em;
     border-radius: 10px;
+    border: 5px solid #D90769;
 }
 
 aside ol {
@@ -142,12 +238,29 @@ aside ol {
 }
 
 /*start of the works section*/
-
+.my-works-header {
+    color:red;
+}
 
 
 
 
 /* end of the works section */
+
+
+/* footer section? */
+footer {
+    background-color:#181c2f;
+    color: white;
+}
+
+.btt {
+    color: white;
+    text-decoration: none;
+}
+
+
+
 
 
 /* experiementing with a scroll to top button without javascript */
