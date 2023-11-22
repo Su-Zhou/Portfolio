@@ -14,8 +14,8 @@
 */
 
 ::selection {
-    background-color: #d80560;
-    color:#181c2f;
+    background-color: white;
+    color:#be0d5a;
 }
 
 /*body or entire page stuff */
@@ -25,7 +25,6 @@ body {
     padding: 0;
     font-family: 'Exo 2', sans-serif;
     overflow-x: hidden;
-    float
 }
 /* end of entire page section stuff */
 
@@ -35,9 +34,10 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    display:flex;
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .hero::before {
@@ -136,10 +136,8 @@ body {
     word-spacing: 5px;
     margin-bottom: 6rem;
 }
+
 /*navigation section */
-
-
-
 nav {
     position:relative;
     width: 100%;
@@ -147,7 +145,6 @@ nav {
     z-index: 1;
     font-family: 'Michroma',sans-serif, arial;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -155,11 +152,9 @@ nav ul {
     justify-content: center;
     position:relative;
 }
-
 nav li {
     margin: 0 15px;
 }
-
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -170,7 +165,6 @@ nav li {
     transition: background-color 0.3s ease;
     box-shadow: 0 0.25rem 0.5rem 0 rgb(223, 32, 95);
 }
-
 .button:hover {
     background-color: #c12151; 
     color: white;
@@ -183,23 +177,30 @@ nav li {
 /* start of the actual body/text section */
 /*starting with the about-me section*/
 #About-Me {
-    background-color:#7c6c8d;
+    background-color:#181c2f;
     color:#181c2f;
+    background: linear-gradient(130deg,#be0d5a 50%, #181c2f 50%);
+    width: 100%;
+}
+dl {
+    color:#cfcfcf; 
+}
+#About-Me p {
+    color:rgb(207, 207, 207); 
 }
 /*about me header*/
 .about-me-header span {
-    color:#181c2f;
+    color:#ffffff;
 }
 .about-me-header {
     background:linear-gradient(110deg, #181c2f, #d80560);
     font-family:'Michroma';
-    border-style: solid;
     border-width: thick;
     margin: 0;
     padding: 0;
     text-align: center;
     display: block;
-    font-size: 6em;
+    font-size: 3em;
     display: block;
   animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
 }
@@ -214,9 +215,60 @@ nav li {
 /*end of about me heading*/
 
 /*introduction*/
-.introduction-heading {
+.introduction-heading{
     display: flex;
-    
+    flex-wrap: nowrap;
+    background-color: #85224d;
+    font-size: 2em;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    padding: 10px;
+    color:white;
+    border-radius: 5px;
+    float:left;
+}
+
+.intro {
+    padding: 5px;
+    line-height: 2;
+    font-size: 20px;
+    background-color:#181c2f;
+}
+
+.hobbies-interest {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color:#85224d;
+    font-size: 2em;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    padding: 10px;
+    color:white;
+    border-radius: 5px;
+}
+
+.hobbies-interest-list {
+    padding: 5px;
+    line-height: 2;
+    font-size: 20px;
+}
+
+dt {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color:#85224d;
+    width: 15%;
+    text-decoration: none;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 /*aside thing*/
@@ -224,13 +276,14 @@ h4 {
     color:white;
 }
 aside {
-    background:rgb(127, 127, 174);
+    background:#d80560;
     display: block;
-    float: left;
+    float: right;
     padding: 0.5em 2em;
     margin: 3em;
-    border-radius: 10px;
-    border: 5px solid #D90769;
+    border-radius: 5px;
+    justify-content: center;
+    
 }
 
 aside ol {
@@ -241,14 +294,36 @@ aside ol {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+}
+/*aside thing*/
 
+/*goals section*/
+.goals-header {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #85224d;
+    font-size: 2em;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    padding: 10px;
+    color:white;
+    border-radius: 5px;
+    float:left;
+}
+
+table {
+    color:#cfcfcf;
+    line-height: 2;
+    font-size: 15px;
 }
 
 /*start of the works section*/
 .my-works-header {
     color:red;
 }
-
 
 
 
@@ -301,6 +376,7 @@ footer {
 
 
 
+/*Media equery?*/
   @media only screen and (max-width: 768px) {
     .hero {
         height: auto;
@@ -323,5 +399,21 @@ footer {
         font-size: 1.5rem;
         margin-bottom: 3rem;
     }
+
+    nav {
+        bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
 }
+
+
+
 
