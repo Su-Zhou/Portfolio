@@ -520,35 +520,28 @@ footer {
         height: auto;
         min-height: 100vh;
     }
-
     .hero::before {
         background-attachment: scroll;
     }
-
     .hero-content {
         margin-top: 1em;
     }
-
     .hero-title {
         font-size: 3.5rem;
     }
-
     .hero-subtitle {
         font-size: 1.5rem;
         margin-bottom: 3rem;
     }
-
     nav {
         bottom: 20px;
     }
-
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-
     nav li {
-        margin: 10px 0;
+    margin: 10px 0;
     }
 }
 
