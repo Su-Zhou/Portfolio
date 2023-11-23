@@ -17,6 +17,11 @@
     background-color: white;
     color:#be0d5a;
 }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 
 /*body or entire page stuff */
 body {
@@ -26,6 +31,7 @@ body {
     font-family: 'Exo 2', sans-serif;
     overflow-x: hidden;
 }
+
 /* end of entire page section stuff */
 
 /*hero page section */
@@ -170,6 +176,7 @@ nav li {
     color: white;
     box-shadow: 0 0.25rem 0.5rem 0 rgb(255, 255, 255);
 }
+
 /*end of nav section*/
 /*end of hero page section */
 
@@ -186,7 +193,7 @@ dl {
     color:#cfcfcf; 
 }
 #About-Me p {
-    color:rgb(207, 207, 207); 
+    color:rgb(228, 228, 228); 
 }
 /*about me header*/
 .about-me-header span {
@@ -261,6 +268,7 @@ dt {
     flex-wrap: nowrap;
     background-color:#85224d;
     width: 15%;
+    color:white;
     text-decoration: none;
     margin: 10px;
     text-align: center;
@@ -271,18 +279,22 @@ dt {
 /*aside thing*/
 h4 {
     color:white;
+    font-size:  20px;
 }
 aside {
-    background:#d80560;
-    display: block;
+    background:linear-gradient(180deg, #181c2f 50%, #d80560 );
     float: right;
     padding: 0.5em 2em;
     margin: 3em;
     border-radius: 5px;
     justify-content: center;
-    
+    border: solid;
+    border-color:#d80560;
+    border-width: 5px;
+    border-radius: 5px;
+    display: flex; /* Use flex display for centering */
+    align-items: center; 
 }
-
 aside ol {
     list-style: none;
     display: block;
@@ -293,9 +305,28 @@ aside ol {
     padding-inline-start: 40px;
     text-decoration: none;
 }
+ol li a{
+    color:white;
+    list-style:none;
+    text-align:left;
+    margin: 5px;
+}
 
-ol li {
-    color:red;
+.sitebutton {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ffffff; 
+    border-radius: 5px;
+    color:#181c2f;
+    transition: background-color 0.3s ease;
+    display: flex;
+    box-shadow: 0 0.25rem 0.5rem 0 rgb(223, 32, 95);
+}
+.sitebutton:hover{
+    background-color: #c12151; 
+    color: white;
+    box-shadow: 0 0.25rem 0.5rem 0 rgb(255, 255, 255);
 }
 /*aside thing*/
 
@@ -304,7 +335,6 @@ ol li {
     display: flex;
     flex-wrap: nowrap;
     background-color: #85224d;
-    font-size: 2em;
     width: 30%;
     margin: 10px;
     text-align: center;
@@ -312,19 +342,45 @@ ol li {
     font-size: 30px;
     padding: 10px;
     color:white;
-    border-radius: 5px;
     float:left;
 }
 
 table {
-    color:#cfcfcf;
+    width: 65%; /* Set a width for the table */
+    border-collapse: collapse;
+    margin-top: 10px;
+    border:#181c2f;
+    border-width: 10px;
+    padding: 5px;
     line-height: 2;
-    font-size: 15px;
+    font-size: 20px;
+    display: flex;
+    margin-left: auto;
+    border-radius: 5px;
 }
+
+th {
+    background:linear-gradient(90deg, #181c2f 20%, #d80560 );
+    color:#FFF;
+    padding: 10px;
+    font-size: 30px;
+}
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    color:#cfcfcf;
+}
+tr:nth-child(even) {
+    background-color:#181c2f
+}
+tr:nth-child(odd) {
+    background-color:#be0d5a;
+}
+/*end of goals section*/
 
 /*start of the works section*/
 #work {
-    background: linear-gradient(90deg,#be0d5a 50%, #181c2f 50%);
+    background: linear-gradient(60deg,#be0d5a 50%, #181c2f 50%);
 }
 
 .my-works-header {
@@ -343,8 +399,12 @@ table {
     color:white;
     text-align:center;
     font-size:2rem;
-    background-color: #85224d;
-    margin: 5px;
+    background-color:#85224d;
+    width: 30%;
+    margin-top: 30px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 /*The actual images */
@@ -380,29 +440,48 @@ figcaption:hover {
     background:white;
     color:#be0d5a;
 }
-
-
-
-
-
 /* end of the works section */
+
+
+/*contacts section!*/
+.contacts-header {
+    background:linear-gradient(90deg, #181c2f, #d80560);
+   font-family:'Michroma';
+   color:white;
+   border-width: thick;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   display: block;
+   font-size: 3em;
+   display: block;
+}
+#Contacts {
+    text-align: center;
+}
+
+#Contacts a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#Contacts img {
+    vertical-align: middle;
+    padding: 30px;
+}
+/*end of contacts section!*/
 
 
 /* footer section? */
 footer {
-    background-color:#181c2f;
+    background-color: #181c2f;
     color: white;
 }
-
-.btt {
+.btt a{
     color: white;
     text-decoration: none;
 }
-
-
-
-
-
+/* end of footer section */
 
 
 
@@ -432,10 +511,6 @@ footer {
     opacity: 1;
   }
   /* end of the scroll to top buttom */
-
-
-
-
 
 
 
