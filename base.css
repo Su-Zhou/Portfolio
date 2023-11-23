@@ -237,7 +237,6 @@ dl {
     font-size: 20px;
     background-color:#181c2f;
 }
-
 .hobbies-interest {
     display: flex;
     flex-wrap: nowrap;
@@ -252,13 +251,11 @@ dl {
     color:white;
     border-radius: 5px;
 }
-
 .hobbies-interest-list {
     padding: 5px;
     line-height: 2;
     font-size: 20px;
 }
-
 dt {
     display: flex;
     flex-wrap: nowrap;
@@ -294,6 +291,11 @@ aside ol {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    text-decoration: none;
+}
+
+ol li {
+    color:red;
 }
 /*aside thing*/
 
@@ -321,9 +323,65 @@ table {
 }
 
 /*start of the works section*/
-.my-works-header {
-    color:red;
+#work {
+    background: linear-gradient(90deg,#be0d5a 50%, #181c2f 50%);
 }
+
+.my-works-header {
+     background:linear-gradient(110deg, #181c2f, #d80560);
+     font-family:'Michroma';
+     border-width: thick;
+     margin: 0;
+    padding: 0;
+     text-align: center;
+       display: block;
+     font-size: 3em;
+     display: block;
+    color:white;
+}
+.worksub  {
+    color:white;
+    text-align:center;
+    font-size:2rem;
+    background-color: #85224d;
+    margin: 5px;
+}
+
+/*The actual images */
+.container,
+.containerschool {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: center;
+}
+.container img, .containerschool img {
+    max-width: 100%;
+    height: auto;
+    flex: none;
+    filter: drop-shadow(10px 10px 10px #222);
+}
+.my-works {
+    text-align: center;
+}
+
+figcaption {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #181c2f, #d80560);
+    border-radius: 5px;
+    margin-top: 10px;
+    color:white;
+    filter: drop-shadow(5px 5px 5px #222);
+    transition: background-color 0.3s ease;
+}
+
+figcaption:hover {
+    background:white;
+    color:#be0d5a;
+}
+
+
 
 
 
@@ -340,6 +398,9 @@ footer {
     color: white;
     text-decoration: none;
 }
+
+
+
 
 
 
@@ -371,6 +432,8 @@ footer {
     opacity: 1;
   }
   /* end of the scroll to top buttom */
+
+
 
 
 
@@ -413,7 +476,4 @@ footer {
         margin: 10px 0;
     }
 }
-
-
-
 
