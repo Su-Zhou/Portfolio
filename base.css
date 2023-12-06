@@ -485,8 +485,6 @@ button {
     color:#181c2f;
     text-decoration: none;
 }
-
-
 /* end of footer section */
 
 
@@ -551,3 +549,19 @@ button {
     }
 }
 
+
+/* JavaScript Incrementing Button)*/
+#totalClicks {
+    color:#d80560;
+  }
+
+
+  #totalClicks.even {
+    color:#d80560;
+  }
+  
+  #totalClicks.odd {
+    color: white;
+  }
+
+ 

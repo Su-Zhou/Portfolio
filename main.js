@@ -12,7 +12,7 @@ function AlertFunction() {
 }
 
 function hoverbuttonON() {
-    document.getElementById("backtoTOP").innerHTML = "GOTCCHA!"
+    document.getElementById("backtoTOP").innerHTML = "GOTCHA HAHA!"
 }
 function hoverbuttonOFF() {
     document.getElementById("backtoTOP").innerHTML = "Back to Top"
@@ -36,6 +36,15 @@ function totalClick(click) {
         totalClicks.innerText = 0;
     }
     console.log(totalClicks.innerText);
+
+    //if else text color changes
+    if (sumvalue % 2 === 0) {
+        totalClicks.classList.add('even');
+        totalClicks.classList.remove('odd'); // Remove the 'odd' class if it exists
+    } else {
+        totalClicks.classList.add('odd');
+        totalClicks.classList.remove('even'); // Remove the 'even' class if it exists
+    }
 }
 
 

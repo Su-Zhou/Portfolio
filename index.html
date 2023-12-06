@@ -164,15 +164,17 @@
 
 <a href='#' class="stt" title="scroll to top"></a>
 <footer> <!-- Footer -->
-    <p id="elementFooter">	&#169; Susane Zhou <span id="year"> 2023</span></p>
+    <p id="elementFooter">	&#169; Susane Zhou <span id="year"> 2021</span></p> <!--changed the year to 2021 to test if the javascript auto year works-->
+    
     <button id="backtoTOP" onclick="AlertFunction()" onmouseover="hoverbuttonON()" onmouseout="hoverbuttonOFF()">Back to Top</button>
 
-        <p>
+        <p class="incrementingButton">
             <button onclick="totalClick(1)">+</button>
             <span id="totalClicks">0</span>
             <button onclick="totalClick(-1)">-</button>
         </p>
             <button onclick="totalClick(0)">RESET</button>
+
 </footer>
 </body>
 </html>
