@@ -164,8 +164,15 @@
 
 <a href='#' class="stt" title="scroll to top"></a>
 <footer> <!-- Footer -->
-    <p>	&#169; Susane Zhou <!-- and I guess Kusuri, but this is for school so my real name it is!--> 2023</p>
-    <p class="btt"><a href="index.html">Back to Top</a></p>
+    <p id="elementFooter">	&#169; Susane Zhou <span id="year"> 2023</span></p>
+    <button id="backtoTOP" onclick="AlertFunction()" onmouseover="hoverbuttonON()" onmouseout="hoverbuttonOFF()">Back to Top</button>
+
+        <p>
+            <button onclick="totalClick(1)">+</button>
+            <span id="totalClicks">0</span>
+            <button onclick="totalClick(-1)">-</button>
+        </p>
+            <button onclick="totalClick(0)">RESET</button>
 </footer>
 </body>
 </html>

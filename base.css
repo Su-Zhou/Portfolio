@@ -145,38 +145,41 @@ body {
 
 /*navigation section */
 nav {
-    position:relative;
+    position: relative;
     width: 100%;
     bottom: 40px;
     z-index: 1;
-    font-family: 'Michroma',sans-serif, arial;
+    font-family: 'Michroma', sans-serif, Arial;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    position:relative;
+    position: relative;
 }
+
 nav li {
     margin: 0 15px;
 }
+
 .button {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     border-radius: 5px;
-    color:#181c2f;
+    color: #181c2f;
     transition: background-color 0.3s ease;
     box-shadow: 0 0.25rem 0.5rem 0 rgb(223, 32, 95);
 }
+
 .button:hover {
-    background-color: #c12151; 
+    background-color: #c12151;
     color: white;
     box-shadow: 0 0.25rem 0.5rem 0 rgb(255, 255, 255);
 }
-
 /*end of nav section*/
 /*end of hero page section */
 
@@ -477,10 +480,13 @@ footer {
     background-color: #181c2f;
     color: white;
 }
-.btt a{
-    color: white;
+button {
+    border-radius: 5px;
+    color:#181c2f;
     text-decoration: none;
 }
+
+
 /* end of footer section */
 
 
