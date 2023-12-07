@@ -169,11 +169,16 @@
     <button id="backtoTOP" onclick="AlertFunction()" onmouseover="hoverbuttonON()" onmouseout="hoverbuttonOFF()">Back to Top</button>
 
         <p class="incrementingButton">
-            <button onclick="totalClick(1)">+</button>
+            <button class="incrementButton" onclick="totalClick(1)">+</button>
             <span id="totalClicks">0</span>
-            <button onclick="totalClick(-1)">-</button>
+            <button class="decrementButton" onclick="totalClick(-1)">-</button>
         </p>
-            <button onclick="totalClick(0)">RESET</button>
+            <button class="resetButton" onclick="totalClick(0)">RESET</button>
+
+            <ol id="numbers">
+            </ol>
+
+
 
 </footer>
 </body>

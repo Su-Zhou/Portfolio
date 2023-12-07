@@ -549,19 +549,57 @@ button {
     }
 }
 
+/* Javascript stuff */
+#backtoTOP {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #181c2f;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0.25rem 0.5rem 0 rgb(223, 32, 95);
+}
+#backtoTOP:hover{
+    background-color: #c12151;
+    color: white;
+    box-shadow: 0 0.25rem 0.5rem 0 rgb(255, 255, 255);
+    cursor:pointer;
+}
 
-/* JavaScript Incrementing Button)*/
+.incrementButton, 
+.decrementButton,
+.resetButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #181c2f;
+    border-radius: 5px;
+    color: #181c2f;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.incrementButton:hover,
+.decrementButton:hover,
+.resetButton:hover {
+    background-color:#d80560;
+    color:white;
+}
+.resetButton {
+    margin-right: 0; 
+}
+
 #totalClicks {
+    font-size: 24px; 
+    margin: 0 10px; 
     color:#d80560;
-  }
-
-
+}
   #totalClicks.even {
     color:#d80560;
   }
-  
   #totalClicks.odd {
-    color: white;
+    color:#cfcfcf;
   }
 
  
